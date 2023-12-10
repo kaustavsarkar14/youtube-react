@@ -3,11 +3,13 @@ import './App.css';
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
 import ResultsPage from './pages/ResultsPage';
+import LinearIndeterminate from './components/LinearIndeterminate';
 
 function App() {
 
   return (
-    <div>
+    <div className='dark:bg-[#0f0f0f] dark:text-white' >
+      <LinearIndeterminate/>
       <Header />
       <Routes>
         <Route path='/' element={<HomePage />} />

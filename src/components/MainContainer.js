@@ -6,7 +6,7 @@ const MainContainer = () => {
   return (
     <div className='flex flex-col flex-1 overflow-auto p-4 h-[50%]'>
       <ButtonList />
-      <VideoConatiner />
+      {/* <VideoConatiner /> */}
     </div>
   )
 }

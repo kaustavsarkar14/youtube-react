@@ -7,7 +7,7 @@ const ButtonList = () => {
   return (
     <div className='w-full mb-3 max-w-full flex overflow-scroll scrollbar-hidden whitespace-nowrap gap-2' >
       {
-        buttonTypes.map((button, i) => <button key={i} className='p-1 px-2 text-sm font-medium rounded-md bg-gray-100' >{button}</button>)
+        buttonTypes.map((button, i) => <button key={i} className='p-1 px-2 text-sm font-medium rounded-md bg-gray-100 dark:bg-[#222222] dark:text-white' >{button}</button>)
       }
     </div>
   )

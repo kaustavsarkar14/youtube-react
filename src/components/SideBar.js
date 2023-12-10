@@ -10,8 +10,8 @@ const SideBar = () => {
   const isSideBarOpen = useSelector(state => state.app.isSideBarOpen)
   if (!isSideBarOpen) return null
   return (
-    <div className='w-[14%] p-3 h-full sticky top-[4rem]' >
-      <div className='flex items-center gap-4 p-2 rounded-lg bg-gray-100' >
+    <div className='w-[14%] p-3 h-full top-12 ' >
+      <div className='flex items-center gap-4 p-2 rounded-lg bg-gray-100 dark:bg-[#222222]' >
         <HomeOutlinedIcon />
         <h3 className='text-sm'>Home</h3>
       </div>
