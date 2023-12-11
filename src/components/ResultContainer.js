@@ -20,7 +20,7 @@ const ResultContainer = () => {
       })
   }, [])
   return (
-    <div className='flex items-center flex-col gap-3 pt-2' >
+    <div className='flex items-center flex-col gap-3 pt-2 px-2 sm:px-0' >
       {
         searchData.map(video => <ResultCard key={video.id} video={video} />)
       }

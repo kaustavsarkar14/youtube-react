@@ -12,7 +12,7 @@ const VideoCard = ({ video }) => {
 
   return (
     <div className=''>
-      <img className='rounded-md' src={video.snippet.thumbnails.medium.url} alt="" />
+      <img className='rounded-md w-full' src={video.snippet.thumbnails.medium.url} alt="" />
       <div className='flex gap-3 pt-2'>
         <img className='w-8 rounded-full h-fit' src={channelDetails && channelDetails.items[0].snippet.thumbnails.medium.url} alt="" />
         <div>

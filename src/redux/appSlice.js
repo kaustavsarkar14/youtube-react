@@ -5,7 +5,7 @@ const appSlice = createSlice({
     initialState: {
         isSideBarOpen: true,
         isAppLoading: false,
-        isDarkMode : false,
+        isDarkMode : localStorage.getItem('isDarkMode')? localStorage.getItem('isDarkMode')==='true' :false,
     },
     reducers: {
         toggleSideBar: (state) => {
@@ -16,6 +16,7 @@ const appSlice = createSlice({
         },
         toggleTheme : (state)=>{
             state.isDarkMode = !state.isDarkMode
+            localStorage.setItem('isDarkMode',state.isDarkMode)
             document.documentElement.classList.toggle('dark')
         }
     }

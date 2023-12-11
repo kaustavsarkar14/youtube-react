@@ -21,12 +21,12 @@ const ResultCard = ({ video }) => {
   // console.log("channel", channelDetails)
 
   return (
-    <div className='flex w-[85%] gap-3'>
+    <div className='flex flex-col sm:flex-row w-[100%] sm:w-[85%] gap-3'>
     <img className='rounded-md' src={video && video.snippet.thumbnails.medium.url} alt="" />
     <div>
       <h1 className='font-semibold mb-2' >{video && video.snippet.title}</h1>
       <p className='text-xs opacity-80' >
-        {videoDetails && videoDetails.items && videoDetails.items[0]?.statistics?.viewCount} views
+        {videoDetails && videoDetails.items && formatViewCount(videoDetails.items[0]?.statistics?.viewCount)} views
         {videoDetails && videoDetails.items && videoDetails.items[0]?.snippet?.publishedAt} ago
       </p>
 
@@ -34,7 +34,7 @@ const ResultCard = ({ video }) => {
         <img className='w-8 rounded-full h-fit' src={channelDetails && channelDetails.items && channelDetails.items[0].snippet.thumbnails.medium.url} alt="" />
         <h2 className='text-xs opacity-80' >{video && video.snippet.channelTitle}</h2>
       </div>
-      <p className='text-xs opacity-80' >{video && video.snippet.description}</p>
+      <p className='text-xs opacity-80 hidden sm:block' >{video && video.snippet.description}</p>
     </div>
   </div>
   )
