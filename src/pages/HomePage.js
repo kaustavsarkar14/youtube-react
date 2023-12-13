@@ -7,7 +7,7 @@ const HomePage = () => {
     return (
         <div className='flex w-full h-screen'>
             <SideBar />
-            {/* <MainContainer /> */}
+            <MainContainer />
         </div>
     )
 }

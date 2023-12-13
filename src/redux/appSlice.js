@@ -18,7 +18,7 @@ const appSlice = createSlice({
             state.isDarkMode = !state.isDarkMode
             localStorage.setItem('isDarkMode',state.isDarkMode)
             document.documentElement.classList.toggle('dark')
-        }
+        },
     }
 })
 

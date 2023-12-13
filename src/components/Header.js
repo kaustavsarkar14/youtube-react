@@ -11,7 +11,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 
 const Header = () => {
-  console.log(localStorage.getItem('isDarkMode')=='true')
   const [searchInput, setSearchInput] = useState('')
   const [suggestions, setSuggestions] = useState([])
   const [isSuggestionsVisible, setSuggestionVisible] = useState(false)

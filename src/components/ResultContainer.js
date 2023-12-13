@@ -10,7 +10,6 @@ const ResultContainer = () => {
   const [searchParams] = useSearchParams()
   const searchTerm = searchParams.get('search_query')
   const dispatch = useDispatch()
-
   useEffect(() => {
     fetch(`${BASE_URL}/search?key=${process.env.REACT_APP_API_KEY}&q=${searchTerm}&maxResults=${4}&part=snippet&type=video`)
       .then(data => data.json())
@@ -20,7 +19,7 @@ const ResultContainer = () => {
       })
   }, [])
   return (
-    <div className='flex items-center flex-col gap-3 pt-2 px-2 sm:px-0' >
+    <div className='flex items-center flex-col gap-3 pt-2 px-2 sm:px-0 min-h-screen' >
       {
         searchData.map(video => <ResultCard key={video.id} video={video} />)
       }
