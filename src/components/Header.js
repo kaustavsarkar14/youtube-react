@@ -18,6 +18,7 @@ const Header = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const inputBox = useRef()
+  
   function handleSearch() {
     dispatch(setAppLoading(true))
     if (searchInput == '') return
@@ -26,7 +27,7 @@ const Header = () => {
   function searchFromSuggestion(searchTerm) {
     setSearchInput(searchTerm)
     setSuggestionVisible(false)
-    handleSearch()
+    navigate(`/results?search_query=${searchTerm}`)
   }
 
   function fetchSuggestions() {
