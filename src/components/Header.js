@@ -18,7 +18,7 @@ const Header = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const inputBox = useRef()
-  
+
   function handleSearch() {
     dispatch(setAppLoading(true))
     if (searchInput == '') return
@@ -31,7 +31,7 @@ const Header = () => {
   }
 
   function fetchSuggestions() {
-    fetch(`http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=${searchInput}`)
+    fetch(`https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=${searchInput}`)
       .then(data => data.json())
       .then(data => setSuggestions(data[1]))
   }
